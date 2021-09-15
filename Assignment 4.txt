@@ -1,0 +1,59 @@
+1. In a String find and replace a word.
+
+  e.g Java is Object Oriented. Java is Programming Language.
+
+ Search for a word "Java"
+ Replace "Java" with "C++";
+
+ C++ is Object Oriented. C++ is Programming Language.
+
+package com.yash.stringobject;
+
+public class stringReplace {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String str = "java is object oriented . java is programming language.";
+		str = str.replace("java", "C++");
+		System.out.println(str);
+		
+	}
+
+}
+
+
+
+
+2.In a given String count number of words, count numbers of number.
+
+  "12,RutherFord Building,Lake Street,Chichago-29"
+
+
+
+package com.yash.stringobject;
+
+public class Words {
+
+	public static void main(String[] args) {
+		String str = "Java Programming questions";
+		// TODO Auto-generated method stub
+		System.out.println(countWord(str));
+    
+	}
+	public static int countWord(String str) {
+		int wordcount = 1;
+		int len = str.length();
+		
+			for(int i=0; i<len-1; i++) {
+				if(str.charAt(i) == ' ' && str.charAt(i+1) != ' ' ) {
+					wordcount++;
+					
+				}
+			}
+			
+			return wordcount;
+	}
+
+}
